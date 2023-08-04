@@ -24,11 +24,18 @@
         print_r($numbers);
         // Lakukan Looping di sini
 
+        $rest = array();
+        foreach ($numbers as $number) {
+            $mod = $number % 5;
+            $rest[] = $mod; 
+        }
+
         // output nya nanti seperti ini --> [3, 0, 4, 1, 2, 4]
 
         echo "<br>";
         // tampilkan di sini
-        echo "Array sisa baginya adalah:  "; 
+        echo "Array sisa baginya adalah :  ";
+        print_r($rest); 
         echo "<br>";
 
         echo "<h3> Soal No 3 Looping Asociative Array </h3>";
@@ -54,6 +61,17 @@
             ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpeg']
         ];
         
+        foreach ($items as $item) {
+            $itemAssoc = array(
+                'id' => $item[0],
+                'name' => $item[1],
+                'price' => $item[2],
+                'description' => $item[3],
+                'source' => $item[4]
+            );
+            print_r($itemAssoc);
+            echo "<br>";
+        }
         // Output: 
 
     ?>
