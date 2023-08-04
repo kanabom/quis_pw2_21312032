@@ -30,7 +30,12 @@ halaman html. Tampilkan di id jawaban5
 
         // tulis kode dibawah ini
 
-        
+        function Welcome() {
+        return "Selamat datang di universitas teknokrat indonesia";
+        }
+
+    // Tampilkan hasil fungsi Welcome di elemen dengan ID "jawaban5"
+        document.getElementById("jawaban5").innerText = Welcome();
        
         // Soal No. 6 Fungsi Looping
         /* 
@@ -39,6 +44,19 @@ halaman html. Tampilkan di id jawaban5
         */
 
         // tulis kode di sini 
+
+        function looping(start, end) {
+        let hasil = "";
+        for (let i = start; i <= end; i++) {
+            hasil += i;
+            if (i < end) {
+                hasil += ",";
+            }
+        }
+        return hasil;
+        }
+
+        document.getElementById("jawaban6").innerText = "Hasil looping = "+looping(3, 7);
 
     </script>
 </body>
